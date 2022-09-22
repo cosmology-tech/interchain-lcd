@@ -236,7 +236,7 @@ export interface WeightedVoteOptionSDKType {
  */
 
 export interface Deposit {
-  proposal_id: Long;
+  proposalId: Long;
   depositor: string;
   amount: Coin[];
 }
@@ -262,12 +262,12 @@ export interface Proposal {
    * proposal's voting period has ended.
    */
 
-  final_tally_result: TallyResult;
-  submit_time: Date;
-  deposit_end_time: Date;
-  total_deposit: Coin[];
-  voting_start_time: Date;
-  voting_end_time: Date;
+  finalTallyResult: TallyResult;
+  submitTime: Date;
+  depositEndTime: Date;
+  totalDeposit: Coin[];
+  votingStartTime: Date;
+  votingEndTime: Date;
   /** metadata is any arbitrary metadata attached to the proposal. */
 
   metadata: string;
@@ -297,10 +297,10 @@ export interface ProposalSDKType {
 /** TallyResult defines a standard tally for a governance proposal. */
 
 export interface TallyResult {
-  yes_count: string;
-  abstain_count: string;
-  no_count: string;
-  no_with_veto_count: string;
+  yesCount: string;
+  abstainCount: string;
+  noCount: string;
+  noWithVetoCount: string;
 }
 /** TallyResult defines a standard tally for a governance proposal. */
 
@@ -316,7 +316,7 @@ export interface TallyResultSDKType {
  */
 
 export interface Vote {
-  proposal_id: Long;
+  proposalId: Long;
   voter: string;
   options: WeightedVoteOption[];
   /** metadata is any  arbitrary metadata to attached to the vote. */
@@ -340,13 +340,13 @@ export interface VoteSDKType {
 
 export interface DepositParams {
   /** Minimum deposit for a proposal to enter voting period. */
-  min_deposit: Coin[];
+  minDeposit: Coin[];
   /**
    * Maximum period for Atom holders to deposit on a proposal. Initial value: 2
    * months.
    */
 
-  max_deposit_period: Duration;
+  maxDepositPeriod: Duration;
 }
 /** DepositParams defines the params for deposits on governance proposals. */
 
@@ -364,7 +364,7 @@ export interface DepositParamsSDKType {
 
 export interface VotingParams {
   /** Length of the voting period. */
-  voting_period: Duration;
+  votingPeriod: Duration;
 }
 /** VotingParams defines the params for voting on governance proposals. */
 
@@ -388,7 +388,7 @@ export interface TallyParams {
    * vetoed. Default value: 1/3.
    */
 
-  veto_threshold: string;
+  vetoThreshold: string;
 }
 /** TallyParams defines the params for tallying votes on governance proposals. */
 

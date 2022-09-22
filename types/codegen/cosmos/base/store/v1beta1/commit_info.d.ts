@@ -5,7 +5,7 @@
  */
 export interface CommitInfo {
     version: Long;
-    store_infos: StoreInfo[];
+    storeInfos: StoreInfo[];
 }
 /**
  * CommitInfo defines commit information used by the multi-store when committing
@@ -21,7 +21,7 @@ export interface CommitInfoSDKType {
  */
 export interface StoreInfo {
     name: string;
-    commit_id: CommitID;
+    commitId: CommitID;
 }
 /**
  * StoreInfo defines store-specific commit information. It contains a reference

@@ -7,7 +7,7 @@
  */
 export interface StoreKVPair {
   /** the store key for the KVStore this pair originates from */
-  store_key: string;
+  storeKey: string;
   /** true indicates a delete operation, false indicates a set operation */
 
   delete: boolean;

@@ -18,7 +18,7 @@ export interface Class {
   uri: string;
   /** uri_hash is a hash of the document pointed by uri. Optional */
 
-  uri_hash: string;
+  uriHash: string;
   /** data is the app specific metadata of the NFT class. Optional */
 
   data: Any;
@@ -51,7 +51,7 @@ export interface ClassSDKType {
 
 export interface NFT {
   /** class_id associated with the NFT, similar to the contract address of ERC721 */
-  class_id: string;
+  classId: string;
   /** id is a unique identifier of the NFT */
 
   id: string;
@@ -60,7 +60,7 @@ export interface NFT {
   uri: string;
   /** uri_hash is a hash of the document pointed by uri */
 
-  uri_hash: string;
+  uriHash: string;
   /** data is an app specific data of the NFT. Optional */
 
   data: Any;

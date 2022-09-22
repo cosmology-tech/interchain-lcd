@@ -6,11 +6,11 @@ import { Coin, CoinSDKType } from "../../base/v1beta1/coin";
  */
 
 export interface BaseVestingAccount {
-  base_account: BaseAccount;
-  original_vesting: Coin[];
-  delegated_free: Coin[];
-  delegated_vesting: Coin[];
-  end_time: Long;
+  baseAccount: BaseAccount;
+  originalVesting: Coin[];
+  delegatedFree: Coin[];
+  delegatedVesting: Coin[];
+  endTime: Long;
 }
 /**
  * BaseVestingAccount implements the VestingAccount interface. It contains all
@@ -30,8 +30,8 @@ export interface BaseVestingAccountSDKType {
  */
 
 export interface ContinuousVestingAccount {
-  base_vesting_account: BaseVestingAccount;
-  start_time: Long;
+  baseVestingAccount: BaseVestingAccount;
+  startTime: Long;
 }
 /**
  * ContinuousVestingAccount implements the VestingAccount interface. It
@@ -49,7 +49,7 @@ export interface ContinuousVestingAccountSDKType {
  */
 
 export interface DelayedVestingAccount {
-  base_vesting_account: BaseVestingAccount;
+  baseVestingAccount: BaseVestingAccount;
 }
 /**
  * DelayedVestingAccount implements the VestingAccount interface. It vests all
@@ -78,9 +78,9 @@ export interface PeriodSDKType {
  */
 
 export interface PeriodicVestingAccount {
-  base_vesting_account: BaseVestingAccount;
-  start_time: Long;
-  vesting_periods: Period[];
+  baseVestingAccount: BaseVestingAccount;
+  startTime: Long;
+  vestingPeriods: Period[];
 }
 /**
  * PeriodicVestingAccount implements the VestingAccount interface. It
@@ -101,7 +101,7 @@ export interface PeriodicVestingAccountSDKType {
  */
 
 export interface PermanentLockedAccount {
-  base_vesting_account: BaseVestingAccount;
+  baseVestingAccount: BaseVestingAccount;
 }
 /**
  * PermanentLockedAccount implements the VestingAccount interface. It does

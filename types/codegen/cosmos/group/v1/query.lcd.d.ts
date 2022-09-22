@@ -5,17 +5,17 @@ export declare class LCDQueryClient {
     constructor({ requestClient }: {
         requestClient: LCDClient;
     });
-    groupInfo: (params: QueryGroupInfoRequest) => Promise<QueryGroupInfoResponseSDKType>;
-    groupPolicyInfo: (params: QueryGroupPolicyInfoRequest) => Promise<QueryGroupPolicyInfoResponseSDKType>;
-    groupMembers: (params: QueryGroupMembersRequest) => Promise<QueryGroupMembersResponseSDKType>;
-    groupsByAdmin: (params: QueryGroupsByAdminRequest) => Promise<QueryGroupsByAdminResponseSDKType>;
-    groupPoliciesByGroup: (params: QueryGroupPoliciesByGroupRequest) => Promise<QueryGroupPoliciesByGroupResponseSDKType>;
-    groupPoliciesByAdmin: (params: QueryGroupPoliciesByAdminRequest) => Promise<QueryGroupPoliciesByAdminResponseSDKType>;
-    proposal: (params: QueryProposalRequest) => Promise<QueryProposalResponseSDKType>;
-    proposalsByGroupPolicy: (params: QueryProposalsByGroupPolicyRequest) => Promise<QueryProposalsByGroupPolicyResponseSDKType>;
-    voteByProposalVoter: (params: QueryVoteByProposalVoterRequest) => Promise<QueryVoteByProposalVoterResponseSDKType>;
-    votesByProposal: (params: QueryVotesByProposalRequest) => Promise<QueryVotesByProposalResponseSDKType>;
-    votesByVoter: (params: QueryVotesByVoterRequest) => Promise<QueryVotesByVoterResponseSDKType>;
-    groupsByMember: (params: QueryGroupsByMemberRequest) => Promise<QueryGroupsByMemberResponseSDKType>;
-    tallyResult: (params: QueryTallyResultRequest) => Promise<QueryTallyResultResponseSDKType>;
+    groupInfo(params: QueryGroupInfoRequest): Promise<QueryGroupInfoResponseSDKType>;
+    groupPolicyInfo(params: QueryGroupPolicyInfoRequest): Promise<QueryGroupPolicyInfoResponseSDKType>;
+    groupMembers(params: QueryGroupMembersRequest): Promise<QueryGroupMembersResponseSDKType>;
+    groupsByAdmin(params: QueryGroupsByAdminRequest): Promise<QueryGroupsByAdminResponseSDKType>;
+    groupPoliciesByGroup(params: QueryGroupPoliciesByGroupRequest): Promise<QueryGroupPoliciesByGroupResponseSDKType>;
+    groupPoliciesByAdmin(params: QueryGroupPoliciesByAdminRequest): Promise<QueryGroupPoliciesByAdminResponseSDKType>;
+    proposal(params: QueryProposalRequest): Promise<QueryProposalResponseSDKType>;
+    proposalsByGroupPolicy(params: QueryProposalsByGroupPolicyRequest): Promise<QueryProposalsByGroupPolicyResponseSDKType>;
+    voteByProposalVoter(params: QueryVoteByProposalVoterRequest): Promise<QueryVoteByProposalVoterResponseSDKType>;
+    votesByProposal(params: QueryVotesByProposalRequest): Promise<QueryVotesByProposalResponseSDKType>;
+    votesByVoter(params: QueryVotesByVoterRequest): Promise<QueryVotesByVoterResponseSDKType>;
+    groupsByMember(params: QueryGroupsByMemberRequest): Promise<QueryGroupsByMemberResponseSDKType>;
+    tallyResult(params: QueryTallyResultRequest): Promise<QueryTallyResultResponseSDKType>;
 }

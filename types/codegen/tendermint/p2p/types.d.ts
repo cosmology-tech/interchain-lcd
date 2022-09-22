@@ -10,9 +10,9 @@ export interface ProtocolVersionSDKType {
     app: Long;
 }
 export interface NodeInfo {
-    protocol_version: ProtocolVersion;
-    node_id: string;
-    listen_addr: string;
+    protocolVersion: ProtocolVersion;
+    nodeId: string;
+    listenAddr: string;
     network: string;
     version: string;
     channels: Uint8Array;
@@ -30,8 +30,8 @@ export interface NodeInfoSDKType {
     other: NodeInfoOtherSDKType;
 }
 export interface NodeInfoOther {
-    tx_index: string;
-    rpc_address: string;
+    txIndex: string;
+    rpcAddress: string;
 }
 export interface NodeInfoOtherSDKType {
     tx_index: string;
@@ -39,8 +39,8 @@ export interface NodeInfoOtherSDKType {
 }
 export interface PeerInfo {
     id: string;
-    address_info: PeerAddressInfo[];
-    last_connected: Date;
+    addressInfo: PeerAddressInfo[];
+    lastConnected: Date;
 }
 export interface PeerInfoSDKType {
     id: string;
@@ -49,9 +49,9 @@ export interface PeerInfoSDKType {
 }
 export interface PeerAddressInfo {
     address: string;
-    last_dial_success: Date;
-    last_dial_failure: Date;
-    dial_failures: number;
+    lastDialSuccess: Date;
+    lastDialFailure: Date;
+    dialFailures: number;
 }
 export interface PeerAddressInfoSDKType {
     address: string;

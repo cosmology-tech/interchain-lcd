@@ -5,8 +5,8 @@ import { Coin, CoinSDKType } from "../../base/v1beta1/coin";
  */
 
 export interface MsgSetWithdrawAddress {
-  delegator_address: string;
-  withdraw_address: string;
+  delegatorAddress: string;
+  withdrawAddress: string;
 }
 /**
  * MsgSetWithdrawAddress sets the withdraw address for
@@ -29,8 +29,8 @@ export interface MsgSetWithdrawAddressResponseSDKType {}
  */
 
 export interface MsgWithdrawDelegatorReward {
-  delegator_address: string;
-  validator_address: string;
+  delegatorAddress: string;
+  validatorAddress: string;
 }
 /**
  * MsgWithdrawDelegatorReward represents delegation withdrawal to a delegator
@@ -57,7 +57,7 @@ export interface MsgWithdrawDelegatorRewardResponseSDKType {
  */
 
 export interface MsgWithdrawValidatorCommission {
-  validator_address: string;
+  validatorAddress: string;
 }
 /**
  * MsgWithdrawValidatorCommission withdraws the full commission to the validator

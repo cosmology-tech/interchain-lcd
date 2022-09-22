@@ -1,7 +1,7 @@
 /** EventGrant is emitted on Msg/Grant */
 export interface EventGrant {
     /** Msg type URL for which an autorization is granted */
-    msg_type_url: string;
+    msgTypeUrl: string;
     /** Granter account address */
     granter: string;
     /** Grantee account address */
@@ -19,7 +19,7 @@ export interface EventGrantSDKType {
 /** EventRevoke is emitted on Msg/Revoke */
 export interface EventRevoke {
     /** Msg type URL for which an autorization is revoked */
-    msg_type_url: string;
+    msgTypeUrl: string;
     /** Granter account address */
     granter: string;
     /** Grantee account address */

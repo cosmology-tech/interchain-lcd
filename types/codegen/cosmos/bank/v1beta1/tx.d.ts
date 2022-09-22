@@ -2,8 +2,8 @@ import { Coin, CoinSDKType } from "../../base/v1beta1/coin";
 import { Input, InputSDKType, Output, OutputSDKType } from "./bank";
 /** MsgSend represents a message to send coins from one account to another. */
 export interface MsgSend {
-    from_address: string;
-    to_address: string;
+    fromAddress: string;
+    toAddress: string;
     amount: Coin[];
 }
 /** MsgSend represents a message to send coins from one account to another. */

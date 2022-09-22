@@ -40,7 +40,7 @@ export interface QueryValidatorsResponseSDKType {
 
 export interface QueryValidatorRequest {
   /** validator_addr defines the validator address to query for. */
-  validator_addr: string;
+  validatorAddr: string;
 }
 /** QueryValidatorRequest is response type for the Query/Validator RPC method */
 
@@ -67,7 +67,7 @@ export interface QueryValidatorResponseSDKType {
 
 export interface QueryValidatorDelegationsRequest {
   /** validator_addr defines the validator address to query for. */
-  validator_addr: string;
+  validatorAddr: string;
   /** pagination defines an optional pagination for the request. */
 
   pagination?: PageRequest;
@@ -90,7 +90,7 @@ export interface QueryValidatorDelegationsRequestSDKType {
  */
 
 export interface QueryValidatorDelegationsResponse {
-  delegation_responses: DelegationResponse[];
+  delegationResponses: DelegationResponse[];
   /** pagination defines the pagination in the response. */
 
   pagination?: PageResponse;
@@ -113,7 +113,7 @@ export interface QueryValidatorDelegationsResponseSDKType {
 
 export interface QueryValidatorUnbondingDelegationsRequest {
   /** validator_addr defines the validator address to query for. */
-  validator_addr: string;
+  validatorAddr: string;
   /** pagination defines an optional pagination for the request. */
 
   pagination?: PageRequest;
@@ -136,7 +136,7 @@ export interface QueryValidatorUnbondingDelegationsRequestSDKType {
  */
 
 export interface QueryValidatorUnbondingDelegationsResponse {
-  unbonding_responses: UnbondingDelegation[];
+  unbondingResponses: UnbondingDelegation[];
   /** pagination defines the pagination in the response. */
 
   pagination?: PageResponse;
@@ -156,10 +156,10 @@ export interface QueryValidatorUnbondingDelegationsResponseSDKType {
 
 export interface QueryDelegationRequest {
   /** delegator_addr defines the delegator address to query for. */
-  delegator_addr: string;
+  delegatorAddr: string;
   /** validator_addr defines the validator address to query for. */
 
-  validator_addr: string;
+  validatorAddr: string;
 }
 /** QueryDelegationRequest is request type for the Query/Delegation RPC method. */
 
@@ -174,7 +174,7 @@ export interface QueryDelegationRequestSDKType {
 
 export interface QueryDelegationResponse {
   /** delegation_responses defines the delegation info of a delegation. */
-  delegation_response: DelegationResponse;
+  delegationResponse: DelegationResponse;
 }
 /** QueryDelegationResponse is response type for the Query/Delegation RPC method. */
 
@@ -189,10 +189,10 @@ export interface QueryDelegationResponseSDKType {
 
 export interface QueryUnbondingDelegationRequest {
   /** delegator_addr defines the delegator address to query for. */
-  delegator_addr: string;
+  delegatorAddr: string;
   /** validator_addr defines the validator address to query for. */
 
-  validator_addr: string;
+  validatorAddr: string;
 }
 /**
  * QueryUnbondingDelegationRequest is request type for the
@@ -231,7 +231,7 @@ export interface QueryUnbondingDelegationResponseSDKType {
 
 export interface QueryDelegatorDelegationsRequest {
   /** delegator_addr defines the delegator address to query for. */
-  delegator_addr: string;
+  delegatorAddr: string;
   /** pagination defines an optional pagination for the request. */
 
   pagination?: PageRequest;
@@ -255,7 +255,7 @@ export interface QueryDelegatorDelegationsRequestSDKType {
 
 export interface QueryDelegatorDelegationsResponse {
   /** delegation_responses defines all the delegations' info of a delegator. */
-  delegation_responses: DelegationResponse[];
+  delegationResponses: DelegationResponse[];
   /** pagination defines the pagination in the response. */
 
   pagination?: PageResponse;
@@ -279,7 +279,7 @@ export interface QueryDelegatorDelegationsResponseSDKType {
 
 export interface QueryDelegatorUnbondingDelegationsRequest {
   /** delegator_addr defines the delegator address to query for. */
-  delegator_addr: string;
+  delegatorAddr: string;
   /** pagination defines an optional pagination for the request. */
 
   pagination?: PageRequest;
@@ -302,7 +302,7 @@ export interface QueryDelegatorUnbondingDelegationsRequestSDKType {
  */
 
 export interface QueryDelegatorUnbondingDelegationsResponse {
-  unbonding_responses: UnbondingDelegation[];
+  unbondingResponses: UnbondingDelegation[];
   /** pagination defines the pagination in the response. */
 
   pagination?: PageResponse;
@@ -325,13 +325,13 @@ export interface QueryDelegatorUnbondingDelegationsResponseSDKType {
 
 export interface QueryRedelegationsRequest {
   /** delegator_addr defines the delegator address to query for. */
-  delegator_addr: string;
+  delegatorAddr: string;
   /** src_validator_addr defines the validator address to redelegate from. */
 
-  src_validator_addr?: string;
+  srcValidatorAddr?: string;
   /** dst_validator_addr defines the validator address to redelegate to. */
 
-  dst_validator_addr?: string;
+  dstValidatorAddr?: string;
   /** pagination defines an optional pagination for the request. */
 
   pagination?: PageRequest;
@@ -360,7 +360,7 @@ export interface QueryRedelegationsRequestSDKType {
  */
 
 export interface QueryRedelegationsResponse {
-  redelegation_responses: RedelegationResponse[];
+  redelegationResponses: RedelegationResponse[];
   /** pagination defines the pagination in the response. */
 
   pagination?: PageResponse;
@@ -383,7 +383,7 @@ export interface QueryRedelegationsResponseSDKType {
 
 export interface QueryDelegatorValidatorsRequest {
   /** delegator_addr defines the delegator address to query for. */
-  delegator_addr: string;
+  delegatorAddr: string;
   /** pagination defines an optional pagination for the request. */
 
   pagination?: PageRequest;
@@ -431,10 +431,10 @@ export interface QueryDelegatorValidatorsResponseSDKType {
 
 export interface QueryDelegatorValidatorRequest {
   /** delegator_addr defines the delegator address to query for. */
-  delegator_addr: string;
+  delegatorAddr: string;
   /** validator_addr defines the validator address to query for. */
 
-  validator_addr: string;
+  validatorAddr: string;
 }
 /**
  * QueryDelegatorValidatorRequest is request type for the

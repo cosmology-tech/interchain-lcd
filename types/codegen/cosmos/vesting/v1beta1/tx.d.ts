@@ -6,10 +6,10 @@ import { Period, PeriodSDKType } from "./vesting";
  * account.
  */
 export interface MsgCreateVestingAccount {
-    from_address: string;
-    to_address: string;
+    fromAddress: string;
+    toAddress: string;
     amount: Coin[];
-    end_time: Long;
+    endTime: Long;
     delayed: boolean;
 }
 /**
@@ -34,8 +34,8 @@ export interface MsgCreateVestingAccountResponseSDKType {
  * locked account.
  */
 export interface MsgCreatePermanentLockedAccount {
-    from_address: string;
-    to_address: string;
+    fromAddress: string;
+    toAddress: string;
     amount: Coin[];
 }
 /**
@@ -58,10 +58,10 @@ export interface MsgCreatePermanentLockedAccountResponseSDKType {
  * account.
  */
 export interface MsgCreatePeriodicVestingAccount {
-    from_address: string;
-    to_address: string;
-    start_time: Long;
-    vesting_periods: Period[];
+    fromAddress: string;
+    toAddress: string;
+    startTime: Long;
+    vestingPeriods: Period[];
 }
 /**
  * MsgCreateVestingAccount defines a message that enables creating a vesting

@@ -2,7 +2,7 @@
 export interface Proof {
     total: Long;
     index: Long;
-    leaf_hash: Uint8Array;
+    leafHash: Uint8Array;
     aunts: Uint8Array[];
 }
 export interface ProofSDKType {

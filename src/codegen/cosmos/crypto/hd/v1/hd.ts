@@ -4,7 +4,7 @@ export interface BIP44Params {
   purpose: number;
   /** coin_type is a constant that improves privacy */
 
-  coin_type: number;
+  coinType: number;
   /** account splits the key space into independent user identities */
 
   account: number;
@@ -16,7 +16,7 @@ export interface BIP44Params {
   change: boolean;
   /** address_index is used as child index in BIP32 derivation */
 
-  address_index: number;
+  addressIndex: number;
 }
 /** BIP44Params is used as path field in ledger item in Record. */
 

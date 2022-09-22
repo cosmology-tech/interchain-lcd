@@ -41,7 +41,7 @@ export interface Plan {
 
   /** @deprecated */
 
-  upgraded_client_state: Any;
+  upgradedClientState: Any;
 }
 /** Plan specifies information about a planned upgrade and when it should occur. */
 

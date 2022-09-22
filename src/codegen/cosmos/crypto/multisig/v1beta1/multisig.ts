@@ -23,7 +23,7 @@ export interface MultiSignatureSDKType {
  */
 
 export interface CompactBitArray {
-  extra_bits_stored: number;
+  extraBitsStored: number;
   elems: Uint8Array;
 }
 /**

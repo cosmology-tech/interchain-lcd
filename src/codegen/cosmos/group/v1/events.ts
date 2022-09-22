@@ -3,7 +3,7 @@ import { ProposalExecutorResult, ProposalExecutorResultSDKType } from "./types";
 
 export interface EventCreateGroup {
   /** group_id is the unique ID of the group. */
-  group_id: Long;
+  groupId: Long;
 }
 /** EventCreateGroup is an event emitted when a group is created. */
 
@@ -15,7 +15,7 @@ export interface EventCreateGroupSDKType {
 
 export interface EventUpdateGroup {
   /** group_id is the unique ID of the group. */
-  group_id: Long;
+  groupId: Long;
 }
 /** EventUpdateGroup is an event emitted when a group is updated. */
 
@@ -51,7 +51,7 @@ export interface EventUpdateGroupPolicySDKType {
 
 export interface EventSubmitProposal {
   /** proposal_id is the unique ID of the proposal. */
-  proposal_id: Long;
+  proposalId: Long;
 }
 /** EventSubmitProposal is an event emitted when a proposal is created. */
 
@@ -63,7 +63,7 @@ export interface EventSubmitProposalSDKType {
 
 export interface EventWithdrawProposal {
   /** proposal_id is the unique ID of the proposal. */
-  proposal_id: Long;
+  proposalId: Long;
 }
 /** EventWithdrawProposal is an event emitted when a proposal is withdrawn. */
 
@@ -75,7 +75,7 @@ export interface EventWithdrawProposalSDKType {
 
 export interface EventVote {
   /** proposal_id is the unique ID of the proposal. */
-  proposal_id: Long;
+  proposalId: Long;
 }
 /** EventVote is an event emitted when a voter votes on a proposal. */
 
@@ -87,7 +87,7 @@ export interface EventVoteSDKType {
 
 export interface EventExec {
   /** proposal_id is the unique ID of the proposal. */
-  proposal_id: Long;
+  proposalId: Long;
   /** result is the proposal execution result. */
 
   result: ProposalExecutorResult;
@@ -105,7 +105,7 @@ export interface EventExecSDKType {
 
 export interface EventLeaveGroup {
   /** group_id is the unique ID of the group. */
-  group_id: Long;
+  groupId: Long;
   /** address is the account address of the group member. */
 
   address: string;

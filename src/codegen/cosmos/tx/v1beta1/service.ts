@@ -167,7 +167,7 @@ export interface GetTxsEventRequest {
   /** pagination defines a pagination for the request. */
 
   pagination?: PageRequest;
-  order_by?: OrderBy;
+  orderBy?: OrderBy;
 }
 /**
  * GetTxsEventRequest is the request type for the Service.TxsByEvents
@@ -192,7 +192,7 @@ export interface GetTxsEventResponse {
   txs: Tx[];
   /** tx_responses is the list of queried TxResponses. */
 
-  tx_responses: TxResponse[];
+  txResponses: TxResponse[];
   /** pagination defines a pagination for the response. */
 
   pagination?: PageResponse;
@@ -219,7 +219,7 @@ export interface GetTxsEventResponseSDKType {
 
 export interface BroadcastTxRequest {
   /** tx_bytes is the raw transaction. */
-  tx_bytes: Uint8Array;
+  txBytes: Uint8Array;
   mode: BroadcastMode;
 }
 /**
@@ -239,7 +239,7 @@ export interface BroadcastTxRequestSDKType {
 
 export interface BroadcastTxResponse {
   /** tx_response is the queried TxResponses. */
-  tx_response: TxResponse;
+  txResponse: TxResponse;
 }
 /**
  * BroadcastTxResponse is the response type for the
@@ -269,7 +269,7 @@ export interface SimulateRequest {
    * Since: cosmos-sdk 0.43
    */
 
-  tx_bytes: Uint8Array;
+  txBytes: Uint8Array;
 }
 /**
  * SimulateRequest is the request type for the Service.Simulate
@@ -299,7 +299,7 @@ export interface SimulateRequestSDKType {
 
 export interface SimulateResponse {
   /** gas_info is the information about gas used in the simulation. */
-  gas_info: GasInfo;
+  gasInfo: GasInfo;
   /** result is the result of the simulation. */
 
   result: Result;
@@ -341,7 +341,7 @@ export interface GetTxResponse {
   tx: Tx;
   /** tx_response is the queried TxResponses. */
 
-  tx_response: TxResponse;
+  txResponse: TxResponse;
 }
 /** GetTxResponse is the response type for the Service.GetTx method. */
 
@@ -389,7 +389,7 @@ export interface GetBlockWithTxsRequestSDKType {
 export interface GetBlockWithTxsResponse {
   /** txs are the transactions in the block. */
   txs: Tx[];
-  block_id: BlockID;
+  blockId: BlockID;
   block: Block;
   /** pagination defines a pagination for the response. */
 

@@ -114,7 +114,7 @@ export interface Bech32PrefixRequestSDKType {}
 /** Bech32PrefixResponse is the response type for Bech32Prefix rpc method */
 
 export interface Bech32PrefixResponse {
-  bech32_prefix: string;
+  bech32Prefix: string;
 }
 /** Bech32PrefixResponse is the response type for Bech32Prefix rpc method */
 
@@ -124,7 +124,7 @@ export interface Bech32PrefixResponseSDKType {
 /** AddressBytesToStringRequest is the request type for AddressString rpc method */
 
 export interface AddressBytesToStringRequest {
-  address_bytes: Uint8Array;
+  addressBytes: Uint8Array;
 }
 /** AddressBytesToStringRequest is the request type for AddressString rpc method */
 
@@ -134,7 +134,7 @@ export interface AddressBytesToStringRequestSDKType {
 /** AddressBytesToStringResponse is the response type for AddressString rpc method */
 
 export interface AddressBytesToStringResponse {
-  address_string: string;
+  addressString: string;
 }
 /** AddressBytesToStringResponse is the response type for AddressString rpc method */
 
@@ -144,7 +144,7 @@ export interface AddressBytesToStringResponseSDKType {
 /** AddressStringToBytesRequest is the request type for AccountBytes rpc method */
 
 export interface AddressStringToBytesRequest {
-  address_string: string;
+  addressString: string;
 }
 /** AddressStringToBytesRequest is the request type for AccountBytes rpc method */
 
@@ -154,7 +154,7 @@ export interface AddressStringToBytesRequestSDKType {
 /** AddressStringToBytesResponse is the response type for AddressBytes rpc method */
 
 export interface AddressStringToBytesResponse {
-  address_bytes: Uint8Array;
+  addressBytes: Uint8Array;
 }
 /** AddressStringToBytesResponse is the response type for AddressBytes rpc method */
 

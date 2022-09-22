@@ -344,7 +344,7 @@ export interface Member {
   metadata: string;
   /** added_at is a timestamp specifying when a member was added. */
 
-  added_at: Date;
+  addedAt: Date;
 }
 /**
  * Member represents a group member with an account address,
@@ -419,7 +419,7 @@ export interface DecisionPolicyWindows {
    * voting_period is the duration from submission of a proposal to the end of voting period
    * Within this times votes can be submitted with MsgVote.
    */
-  voting_period: Duration;
+  votingPeriod: Duration;
   /**
    * min_execution_period is the minimum duration after the proposal submission
    * where members can start sending MsgExec. This means that the window for
@@ -434,7 +434,7 @@ export interface DecisionPolicyWindows {
    * won't be able to be executed.
    */
 
-  min_execution_period: Duration;
+  minExecutionPeriod: Duration;
 }
 /** DecisionPolicyWindows defines the different windows for voting and execution. */
 
@@ -481,10 +481,10 @@ export interface GroupInfo {
   version: Long;
   /** total_weight is the sum of the group members' weights. */
 
-  total_weight: string;
+  totalWeight: string;
   /** created_at is a timestamp specifying when a group was created. */
 
-  created_at: Date;
+  createdAt: Date;
 }
 /** GroupInfo represents the high-level on-chain information for a group. */
 
@@ -516,7 +516,7 @@ export interface GroupInfoSDKType {
 
 export interface GroupMember {
   /** group_id is the unique ID of the group. */
-  group_id: Long;
+  groupId: Long;
   /** member is the member data. */
 
   member: Member;
@@ -537,7 +537,7 @@ export interface GroupPolicyInfo {
   address: string;
   /** group_id is the unique ID of the group. */
 
-  group_id: Long;
+  groupId: Long;
   /** admin is the account address of the group admin. */
 
   admin: string;
@@ -552,10 +552,10 @@ export interface GroupPolicyInfo {
   version: Long;
   /** decision_policy specifies the group policy's decision policy. */
 
-  decision_policy: Any;
+  decisionPolicy: Any;
   /** created_at is a timestamp specifying when a group policy was created. */
 
-  created_at: Date;
+  createdAt: Date;
 }
 /** GroupPolicyInfo represents the high-level on-chain information for a group policy. */
 
@@ -605,19 +605,19 @@ export interface Proposal {
   proposers: string[];
   /** submit_time is a timestamp specifying when a proposal was submitted. */
 
-  submit_time: Date;
+  submitTime: Date;
   /**
    * group_version tracks the version of the group that this proposal corresponds to.
    * When group membership is changed, existing proposals from previous group versions will become invalid.
    */
 
-  group_version: Long;
+  groupVersion: Long;
   /**
    * group_policy_version tracks the version of the group policy that this proposal corresponds to.
    * When a decision policy is changed, existing proposals from previous policy versions will become invalid.
    */
 
-  group_policy_version: Long;
+  groupPolicyVersion: Long;
   /** status represents the high level position in the life cycle of the proposal. Initial value is Submitted. */
 
   status: ProposalStatus;
@@ -634,7 +634,7 @@ export interface Proposal {
    * has ended.
    */
 
-  final_tally_result: TallyResult;
+  finalTallyResult: TallyResult;
   /**
    * voting_period_end is the timestamp before which voting must be done.
    * Unless a successfull MsgExec is called before (to execute a proposal whose
@@ -643,10 +643,10 @@ export interface Proposal {
    * as `status` and `result` fields will be accordingly updated.
    */
 
-  voting_period_end: Date;
+  votingPeriodEnd: Date;
   /** executor_result is the final result based on the votes and election rule. Initial value is NotRun. */
 
-  executor_result: ProposalExecutorResult;
+  executorResult: ProposalExecutorResult;
   /** messages is a list of Msgs that will be executed if the proposal passes. */
 
   messages: Any[];
@@ -722,16 +722,16 @@ export interface ProposalSDKType {
 
 export interface TallyResult {
   /** yes_count is the weighted sum of yes votes. */
-  yes_count: string;
+  yesCount: string;
   /** abstain_count is the weighted sum of abstainers. */
 
-  abstain_count: string;
+  abstainCount: string;
   /** no is the weighted sum of no votes. */
 
-  no_count: string;
+  noCount: string;
   /** no_with_veto_count is the weighted sum of veto. */
 
-  no_with_veto_count: string;
+  noWithVetoCount: string;
 }
 /** TallyResult represents the sum of weighted votes for each vote option. */
 
@@ -752,7 +752,7 @@ export interface TallyResultSDKType {
 
 export interface Vote {
   /** proposal is the unique ID of the proposal. */
-  proposal_id: Long;
+  proposalId: Long;
   /** voter is the account address of the voter. */
 
   voter: string;
@@ -764,7 +764,7 @@ export interface Vote {
   metadata: string;
   /** submit_time is the timestamp when the vote was submitted. */
 
-  submit_time: Date;
+  submitTime: Date;
 }
 /** Vote represents a vote for a proposal. */
 

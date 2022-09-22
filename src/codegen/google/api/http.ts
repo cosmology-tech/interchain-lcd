@@ -19,7 +19,7 @@ export interface Http {
    * segment matches.
    */
 
-  fully_decode_reserved_expansion: boolean;
+  fullyDecodeReservedExpansion: boolean;
 }
 /**
  * Defines the HTTP configuration for an API service. It contains a list of
@@ -369,14 +369,14 @@ export interface HttpRule {
    * message type.
    */
 
-  response_body: string;
+  responseBody: string;
   /**
    * Additional HTTP bindings for the selector. Nested bindings must
    * not contain an `additional_bindings` field themselves (that is,
    * the nesting may only be one level deep).
    */
 
-  additional_bindings: HttpRule[];
+  additionalBindings: HttpRule[];
 }
 /**
  * # gRPC Transcoding

@@ -8,7 +8,7 @@ import { VoteOption, VoteOptionSDKType, WeightedVoteOption, WeightedVoteOptionSD
  */
 export interface MsgSubmitProposal {
     messages: Any[];
-    initial_deposit: Coin[];
+    initialDeposit: Coin[];
     proposer: string;
     /** metadata is any arbitrary metadata attached to the proposal. */
     metadata: string;
@@ -26,7 +26,7 @@ export interface MsgSubmitProposalSDKType {
 }
 /** MsgSubmitProposalResponse defines the Msg/SubmitProposal response type. */
 export interface MsgSubmitProposalResponse {
-    proposal_id: Long;
+    proposalId: Long;
 }
 /** MsgSubmitProposalResponse defines the Msg/SubmitProposal response type. */
 export interface MsgSubmitProposalResponseSDKType {
@@ -60,7 +60,7 @@ export interface MsgExecLegacyContentResponseSDKType {
 }
 /** MsgVote defines a message to cast a vote. */
 export interface MsgVote {
-    proposal_id: Long;
+    proposalId: Long;
     voter: string;
     option: VoteOption;
     metadata: string;
@@ -80,7 +80,7 @@ export interface MsgVoteResponseSDKType {
 }
 /** MsgVoteWeighted defines a message to cast a vote. */
 export interface MsgVoteWeighted {
-    proposal_id: Long;
+    proposalId: Long;
     voter: string;
     options: WeightedVoteOption[];
     metadata: string;
@@ -100,7 +100,7 @@ export interface MsgVoteWeightedResponseSDKType {
 }
 /** MsgDeposit defines a message to submit a deposit to an existing proposal. */
 export interface MsgDeposit {
-    proposal_id: Long;
+    proposalId: Long;
     depositor: string;
     amount: Coin[];
 }

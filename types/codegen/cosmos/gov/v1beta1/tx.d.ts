@@ -8,7 +8,7 @@ import { VoteOption, VoteOptionSDKType, WeightedVoteOption, WeightedVoteOptionSD
  */
 export interface MsgSubmitProposal {
     content: Any;
-    initial_deposit: Coin[];
+    initialDeposit: Coin[];
     proposer: string;
 }
 /**
@@ -22,7 +22,7 @@ export interface MsgSubmitProposalSDKType {
 }
 /** MsgSubmitProposalResponse defines the Msg/SubmitProposal response type. */
 export interface MsgSubmitProposalResponse {
-    proposal_id: Long;
+    proposalId: Long;
 }
 /** MsgSubmitProposalResponse defines the Msg/SubmitProposal response type. */
 export interface MsgSubmitProposalResponseSDKType {
@@ -30,7 +30,7 @@ export interface MsgSubmitProposalResponseSDKType {
 }
 /** MsgVote defines a message to cast a vote. */
 export interface MsgVote {
-    proposal_id: Long;
+    proposalId: Long;
     voter: string;
     option: VoteOption;
 }
@@ -52,7 +52,7 @@ export interface MsgVoteResponseSDKType {
  * Since: cosmos-sdk 0.43
  */
 export interface MsgVoteWeighted {
-    proposal_id: Long;
+    proposalId: Long;
     voter: string;
     options: WeightedVoteOption[];
 }
@@ -82,7 +82,7 @@ export interface MsgVoteWeightedResponseSDKType {
 }
 /** MsgDeposit defines a message to submit a deposit to an existing proposal. */
 export interface MsgDeposit {
-    proposal_id: Long;
+    proposalId: Long;
     depositor: string;
     amount: Coin[];
 }

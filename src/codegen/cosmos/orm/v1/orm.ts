@@ -1,7 +1,7 @@
 /** TableDescriptor describes an ORM table. */
 export interface TableDescriptor {
   /** primary_key defines the primary key for the table. */
-  primary_key: PrimaryKeyDescriptor;
+  primaryKey: PrimaryKeyDescriptor;
   /** index defines one or more secondary indexes. */
 
   index: SecondaryIndexDescriptor[];
@@ -71,7 +71,7 @@ export interface PrimaryKeyDescriptor {
    * contain one field of that is of type uint64.
    */
 
-  auto_increment: boolean;
+  autoIncrement: boolean;
 }
 /** PrimaryKeyDescriptor describes a table primary key. */
 

@@ -77,7 +77,7 @@ export interface QueryUpgradedConsensusStateRequest {
    * last height of the current chain must be sent in request
    * as this is the height under which next consensus state is stored
    */
-  last_height: Long;
+  lastHeight: Long;
 }
 /**
  * QueryUpgradedConsensusStateRequest is the request type for the Query/UpgradedConsensusState
@@ -102,7 +102,7 @@ export interface QueryUpgradedConsensusStateRequestSDKType {
 
 export interface QueryUpgradedConsensusStateResponse {
   /** Since: cosmos-sdk 0.43 */
-  upgraded_consensus_state: Uint8Array;
+  upgradedConsensusState: Uint8Array;
 }
 /**
  * QueryUpgradedConsensusStateResponse is the response type for the Query/UpgradedConsensusState
@@ -128,7 +128,7 @@ export interface QueryModuleVersionsRequest {
    * consensus version from state. Leaving this empty will
    * fetch the full list of module versions from state
    */
-  module_name?: string;
+  moduleName?: string;
 }
 /**
  * QueryModuleVersionsRequest is the request type for the Query/ModuleVersions
@@ -154,7 +154,7 @@ export interface QueryModuleVersionsRequestSDKType {
 
 export interface QueryModuleVersionsResponse {
   /** module_versions is a list of module names with their consensus versions. */
-  module_versions: ModuleVersion[];
+  moduleVersions: ModuleVersion[];
 }
 /**
  * QueryModuleVersionsResponse is the response type for the Query/ModuleVersions

@@ -92,7 +92,7 @@ export interface MsgCreateGroupSDKType {
 
 export interface MsgCreateGroupResponse {
   /** group_id is the unique ID of the newly created group. */
-  group_id: Long;
+  groupId: Long;
 }
 /** MsgCreateGroupResponse is the Msg/CreateGroup response type. */
 
@@ -107,13 +107,13 @@ export interface MsgUpdateGroupMembers {
   admin: string;
   /** group_id is the unique ID of the group. */
 
-  group_id: Long;
+  groupId: Long;
   /**
    * member_updates is the list of members to update,
    * set weight to 0 to remove a member.
    */
 
-  member_updates: Member[];
+  memberUpdates: Member[];
 }
 /** MsgUpdateGroupMembers is the Msg/UpdateGroupMembers request type. */
 
@@ -143,10 +143,10 @@ export interface MsgUpdateGroupAdmin {
   admin: string;
   /** group_id is the unique ID of the group. */
 
-  group_id: Long;
+  groupId: Long;
   /** new_admin is the group new admin account address. */
 
-  new_admin: string;
+  newAdmin: string;
 }
 /** MsgUpdateGroupAdmin is the Msg/UpdateGroupAdmin request type. */
 
@@ -173,7 +173,7 @@ export interface MsgUpdateGroupMetadata {
   admin: string;
   /** group_id is the unique ID of the group. */
 
-  group_id: Long;
+  groupId: Long;
   /** metadata is the updated group's metadata. */
 
   metadata: string;
@@ -203,13 +203,13 @@ export interface MsgCreateGroupPolicy {
   admin: string;
   /** group_id is the unique ID of the group. */
 
-  group_id: Long;
+  groupId: Long;
   /** metadata is any arbitrary metadata attached to the group policy. */
 
   metadata: string;
   /** decision_policy specifies the group policy's decision policy. */
 
-  decision_policy: Any;
+  decisionPolicy: Any;
 }
 /** MsgCreateGroupPolicy is the Msg/CreateGroupPolicy request type. */
 
@@ -248,7 +248,7 @@ export interface MsgUpdateGroupPolicyAdmin {
   address: string;
   /** new_admin is the new group policy admin. */
 
-  new_admin: string;
+  newAdmin: string;
 }
 /** MsgUpdateGroupPolicyAdmin is the Msg/UpdateGroupPolicyAdmin request type. */
 
@@ -272,16 +272,16 @@ export interface MsgCreateGroupWithPolicy {
   members: Member[];
   /** group_metadata is any arbitrary metadata attached to the group. */
 
-  group_metadata: string;
+  groupMetadata: string;
   /** group_policy_metadata is any arbitrary metadata attached to the group policy. */
 
-  group_policy_metadata: string;
+  groupPolicyMetadata: string;
   /** group_policy_as_admin is a boolean field, if set to true, the group policy account address will be used as group and group policy admin. */
 
-  group_policy_as_admin: boolean;
+  groupPolicyAsAdmin: boolean;
   /** decision_policy specifies the group policy's decision policy. */
 
-  decision_policy: Any;
+  decisionPolicy: Any;
 }
 /** MsgCreateGroupWithPolicy is the Msg/CreateGroupWithPolicy request type. */
 
@@ -308,10 +308,10 @@ export interface MsgCreateGroupWithPolicySDKType {
 
 export interface MsgCreateGroupWithPolicyResponse {
   /** group_id is the unique ID of the newly created group with policy. */
-  group_id: Long;
+  groupId: Long;
   /** group_policy_address is the account address of the newly created group policy. */
 
-  group_policy_address: string;
+  groupPolicyAddress: string;
 }
 /** MsgCreateGroupWithPolicyResponse is the Msg/CreateGroupWithPolicy response type. */
 
@@ -338,7 +338,7 @@ export interface MsgUpdateGroupPolicyDecisionPolicy {
   address: string;
   /** decision_policy is the updated group policy's decision policy. */
 
-  decision_policy: Any;
+  decisionPolicy: Any;
 }
 /** MsgUpdateGroupPolicyDecisionPolicy is the Msg/UpdateGroupPolicyDecisionPolicy request type. */
 
@@ -442,7 +442,7 @@ export interface MsgSubmitProposalSDKType {
 
 export interface MsgSubmitProposalResponse {
   /** proposal is the unique ID of the proposal. */
-  proposal_id: Long;
+  proposalId: Long;
 }
 /** MsgSubmitProposalResponse is the Msg/SubmitProposal response type. */
 
@@ -454,7 +454,7 @@ export interface MsgSubmitProposalResponseSDKType {
 
 export interface MsgWithdrawProposal {
   /** proposal is the unique ID of the proposal. */
-  proposal_id: Long;
+  proposalId: Long;
   /** address is the admin of the group policy or one of the proposer of the proposal. */
 
   address: string;
@@ -478,7 +478,7 @@ export interface MsgWithdrawProposalResponseSDKType {}
 
 export interface MsgVote {
   /** proposal is the unique ID of the proposal. */
-  proposal_id: Long;
+  proposalId: Long;
   /** voter is the voter account address. */
 
   voter: string;
@@ -526,7 +526,7 @@ export interface MsgVoteResponseSDKType {}
 
 export interface MsgExec {
   /** proposal is the unique ID of the proposal. */
-  proposal_id: Long;
+  proposalId: Long;
   /** signer is the account address used to execute the proposal. */
 
   signer: string;
@@ -553,7 +553,7 @@ export interface MsgLeaveGroup {
   address: string;
   /** group_id is the unique ID of the group. */
 
-  group_id: Long;
+  groupId: Long;
 }
 /** MsgLeaveGroup is the Msg/LeaveGroup request type. */
 

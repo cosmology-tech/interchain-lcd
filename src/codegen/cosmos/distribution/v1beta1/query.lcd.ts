@@ -10,77 +10,95 @@ export class LCDQueryClient {
     requestClient: LCDClient;
   }) {
     this.req = requestClient;
+    this.params = this.params.bind(this);
+    this.validatorOutstandingRewards = this.validatorOutstandingRewards.bind(this);
+    this.validatorCommission = this.validatorCommission.bind(this);
+    this.validatorSlashes = this.validatorSlashes.bind(this);
+    this.delegationRewards = this.delegationRewards.bind(this);
+    this.delegationTotalRewards = this.delegationTotalRewards.bind(this);
+    this.delegatorValidators = this.delegatorValidators.bind(this);
+    this.delegatorWithdrawAddress = this.delegatorWithdrawAddress.bind(this);
+    this.communityPool = this.communityPool.bind(this);
   }
   /* Params queries params of the distribution module. */
 
 
-  params = async (_params: QueryParamsRequest = {}): Promise<QueryParamsResponseSDKType> => {
+  async params(_params: QueryParamsRequest = {}): Promise<QueryParamsResponseSDKType> {
     const endpoint = `cosmos/distribution/v1beta1/params`;
     return await this.req.get<QueryParamsResponseSDKType>(endpoint);
-  };
+  }
   /* ValidatorOutstandingRewards queries rewards of a validator address. */
 
-  validatorOutstandingRewards = async (params: QueryValidatorOutstandingRewardsRequest): Promise<QueryValidatorOutstandingRewardsResponseSDKType> => {
-    const endpoint = `cosmos/distribution/v1beta1/validators/${params.validator_address}/outstanding_rewards`;
+
+  async validatorOutstandingRewards(params: QueryValidatorOutstandingRewardsRequest): Promise<QueryValidatorOutstandingRewardsResponseSDKType> {
+    const endpoint = `cosmos/distribution/v1beta1/validators/${params.validatorAddress}/outstanding_rewards`;
     return await this.req.get<QueryValidatorOutstandingRewardsResponseSDKType>(endpoint);
-  };
+  }
   /* ValidatorCommission queries accumulated commission for a validator. */
 
-  validatorCommission = async (params: QueryValidatorCommissionRequest): Promise<QueryValidatorCommissionResponseSDKType> => {
-    const endpoint = `cosmos/distribution/v1beta1/validators/${params.validator_address}/commission`;
+
+  async validatorCommission(params: QueryValidatorCommissionRequest): Promise<QueryValidatorCommissionResponseSDKType> {
+    const endpoint = `cosmos/distribution/v1beta1/validators/${params.validatorAddress}/commission`;
     return await this.req.get<QueryValidatorCommissionResponseSDKType>(endpoint);
-  };
+  }
   /* ValidatorSlashes queries slash events of a validator. */
 
-  validatorSlashes = async (params: QueryValidatorSlashesRequest): Promise<QueryValidatorSlashesResponseSDKType> => {
+
+  async validatorSlashes(params: QueryValidatorSlashesRequest): Promise<QueryValidatorSlashesResponseSDKType> {
     const options: any = {
       params: {}
     };
 
-    if (typeof params?.starting_height !== "undefined") {
-      options.params.starting_height = params.starting_height;
+    if (typeof params?.startingHeight !== "undefined") {
+      options.params.starting_height = params.startingHeight;
     }
 
-    if (typeof params?.ending_height !== "undefined") {
-      options.params.ending_height = params.ending_height;
+    if (typeof params?.endingHeight !== "undefined") {
+      options.params.ending_height = params.endingHeight;
     }
 
     if (typeof params?.pagination !== "undefined") {
       setPaginationParams(options, params.pagination);
     }
 
-    const endpoint = `cosmos/distribution/v1beta1/validators/${params.validator_address}/slashes`;
+    const endpoint = `cosmos/distribution/v1beta1/validators/${params.validatorAddress}/slashes`;
     return await this.req.get<QueryValidatorSlashesResponseSDKType>(endpoint, options);
-  };
+  }
   /* DelegationRewards queries the total rewards accrued by a delegation. */
 
-  delegationRewards = async (params: QueryDelegationRewardsRequest): Promise<QueryDelegationRewardsResponseSDKType> => {
-    const endpoint = `cosmos/distribution/v1beta1/delegators/${params.delegator_address}rewards/${params.validator_address}`;
+
+  async delegationRewards(params: QueryDelegationRewardsRequest): Promise<QueryDelegationRewardsResponseSDKType> {
+    const endpoint = `cosmos/distribution/v1beta1/delegators/${params.delegatorAddress}rewards/${params.validatorAddress}`;
     return await this.req.get<QueryDelegationRewardsResponseSDKType>(endpoint);
-  };
+  }
   /* DelegationTotalRewards queries the total rewards accrued by a each
   validator. */
 
-  delegationTotalRewards = async (params: QueryDelegationTotalRewardsRequest): Promise<QueryDelegationTotalRewardsResponseSDKType> => {
-    const endpoint = `cosmos/distribution/v1beta1/delegators/${params.delegator_address}/rewards`;
+
+  async delegationTotalRewards(params: QueryDelegationTotalRewardsRequest): Promise<QueryDelegationTotalRewardsResponseSDKType> {
+    const endpoint = `cosmos/distribution/v1beta1/delegators/${params.delegatorAddress}/rewards`;
     return await this.req.get<QueryDelegationTotalRewardsResponseSDKType>(endpoint);
-  };
+  }
   /* DelegatorValidators queries the validators of a delegator. */
 
-  delegatorValidators = async (params: QueryDelegatorValidatorsRequest): Promise<QueryDelegatorValidatorsResponseSDKType> => {
-    const endpoint = `cosmos/distribution/v1beta1/delegators/${params.delegator_address}/validators`;
+
+  async delegatorValidators(params: QueryDelegatorValidatorsRequest): Promise<QueryDelegatorValidatorsResponseSDKType> {
+    const endpoint = `cosmos/distribution/v1beta1/delegators/${params.delegatorAddress}/validators`;
     return await this.req.get<QueryDelegatorValidatorsResponseSDKType>(endpoint);
-  };
+  }
   /* DelegatorWithdrawAddress queries withdraw address of a delegator. */
 
-  delegatorWithdrawAddress = async (params: QueryDelegatorWithdrawAddressRequest): Promise<QueryDelegatorWithdrawAddressResponseSDKType> => {
-    const endpoint = `cosmos/distribution/v1beta1/delegators/${params.delegator_address}/withdraw_address`;
+
+  async delegatorWithdrawAddress(params: QueryDelegatorWithdrawAddressRequest): Promise<QueryDelegatorWithdrawAddressResponseSDKType> {
+    const endpoint = `cosmos/distribution/v1beta1/delegators/${params.delegatorAddress}/withdraw_address`;
     return await this.req.get<QueryDelegatorWithdrawAddressResponseSDKType>(endpoint);
-  };
+  }
   /* CommunityPool queries the community pool coins. */
 
-  communityPool = async (_params: QueryCommunityPoolRequest = {}): Promise<QueryCommunityPoolResponseSDKType> => {
+
+  async communityPool(_params: QueryCommunityPoolRequest = {}): Promise<QueryCommunityPoolResponseSDKType> {
     const endpoint = `cosmos/distribution/v1beta1/community_pool`;
     return await this.req.get<QueryCommunityPoolResponseSDKType>(endpoint);
-  };
+  }
+
 }

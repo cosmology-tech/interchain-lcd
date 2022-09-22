@@ -11,8 +11,11 @@ telescope({
   outPath,
   options: {
     removeUnusedImports: true,
-    classesUseArrowFunctions: true,
+    classesUseArrowFunctions: false,
     prototypes: {
+      parser: {
+        keepCase: false
+      },
       enabled: false,
       includePackageVar: false,
       typingsFormat: {

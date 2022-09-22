@@ -4,7 +4,7 @@ import { Any, AnySDKType } from "../../../google/protobuf/any";
 
 export interface QueryEvidenceRequest {
   /** evidence_hash defines the hash of the requested evidence. */
-  evidence_hash: Uint8Array;
+  evidenceHash: Uint8Array;
 }
 /** QueryEvidenceRequest is the request type for the Query/Evidence RPC method. */
 

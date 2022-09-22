@@ -25,7 +25,7 @@ export interface TxResponse {
    * non-deterministic.
    */
 
-  raw_log: string;
+  rawLog: string;
   /** The output of the application's logger (typed). May be non-deterministic. */
 
   logs: ABCIMessageLog[];
@@ -34,10 +34,10 @@ export interface TxResponse {
   info: string;
   /** Amount of gas requested for transaction. */
 
-  gas_wanted: Long;
+  gasWanted: Long;
   /** Amount of gas consumed by transaction. */
 
-  gas_used: Long;
+  gasUsed: Long;
   /** The request transaction bytes. */
 
   tx: Any;
@@ -121,7 +121,7 @@ export interface TxResponseSDKType {
 /** ABCIMessageLog defines a structure containing an indexed tx ABCI message log. */
 
 export interface ABCIMessageLog {
-  msg_index: number;
+  msgIndex: number;
   log: string;
   /**
    * Events contains a slice of Event objects that were emitted during some
@@ -182,10 +182,10 @@ export interface AttributeSDKType {
 
 export interface GasInfo {
   /** GasWanted is the maximum units of work we allow this tx to perform. */
-  gas_wanted: Long;
+  gasWanted: Long;
   /** GasUsed is the amount of gas actually consumed. */
 
-  gas_used: Long;
+  gasUsed: Long;
 }
 /** GasInfo defines tx execution gas context. */
 
@@ -223,7 +223,7 @@ export interface Result {
    * Since: cosmos-sdk 0.46
    */
 
-  msg_responses: Any[];
+  msgResponses: Any[];
 }
 /** Result is the union of ResponseFormat and ResponseCheckTx. */
 
@@ -260,7 +260,7 @@ export interface ResultSDKType {
  */
 
 export interface SimulationResponse {
-  gas_info: GasInfo;
+  gasInfo: GasInfo;
   result: Result;
 }
 /**
@@ -280,7 +280,7 @@ export interface SimulationResponseSDKType {
 /** @deprecated */
 
 export interface MsgData {
-  msg_type: string;
+  msgType: string;
   data: Uint8Array;
 }
 /**
@@ -310,7 +310,7 @@ export interface TxMsgData {
    * Since: cosmos-sdk 0.46
    */
 
-  msg_responses: Any[];
+  msgResponses: Any[];
 }
 /**
  * TxMsgData defines a list of MsgData. A transaction will have a MsgData object
@@ -334,16 +334,16 @@ export interface TxMsgDataSDKType {
 
 export interface SearchTxsResult {
   /** Count of all txs */
-  total_count: Long;
+  totalCount: Long;
   /** Count of txs in current page */
 
   count: Long;
   /** Index of current page, start from 1 */
 
-  page_number: Long;
+  pageNumber: Long;
   /** Count of total pages */
 
-  page_total: Long;
+  pageTotal: Long;
   /** Max count txs per page */
 
   limit: Long;

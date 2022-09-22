@@ -2,10 +2,10 @@ import { DecCoin, DecCoinSDKType, Coin, CoinSDKType } from "../../base/v1beta1/c
 /** Params defines the set of params for the distribution module. */
 
 export interface Params {
-  community_tax: string;
-  base_proposer_reward: string;
-  bonus_proposer_reward: string;
-  withdraw_addr_enabled: boolean;
+  communityTax: string;
+  baseProposerReward: string;
+  bonusProposerReward: string;
+  withdrawAddrEnabled: boolean;
 }
 /** Params defines the set of params for the distribution module. */
 
@@ -31,8 +31,8 @@ export interface ParamsSDKType {
  */
 
 export interface ValidatorHistoricalRewards {
-  cumulative_reward_ratio: DecCoin[];
-  reference_count: number;
+  cumulativeRewardRatio: DecCoin[];
+  referenceCount: number;
 }
 /**
  * ValidatorHistoricalRewards represents historical rewards for a validator.
@@ -113,7 +113,7 @@ export interface ValidatorOutstandingRewardsSDKType {
  */
 
 export interface ValidatorSlashEvent {
-  validator_period: Long;
+  validatorPeriod: Long;
   fraction: string;
 }
 /**
@@ -130,7 +130,7 @@ export interface ValidatorSlashEventSDKType {
 /** ValidatorSlashEvents is a collection of ValidatorSlashEvent messages. */
 
 export interface ValidatorSlashEvents {
-  validator_slash_events: ValidatorSlashEvent[];
+  validatorSlashEvents: ValidatorSlashEvent[];
 }
 /** ValidatorSlashEvents is a collection of ValidatorSlashEvent messages. */
 
@@ -140,7 +140,7 @@ export interface ValidatorSlashEventsSDKType {
 /** FeePool is the global fee pool for distribution. */
 
 export interface FeePool {
-  community_pool: DecCoin[];
+  communityPool: DecCoin[];
 }
 /** FeePool is the global fee pool for distribution. */
 
@@ -181,7 +181,7 @@ export interface CommunityPoolSpendProposalSDKType {
  */
 
 export interface DelegatorStartingInfo {
-  previous_period: Long;
+  previousPeriod: Long;
   stake: string;
   height: Long;
 }
@@ -205,7 +205,7 @@ export interface DelegatorStartingInfoSDKType {
  */
 
 export interface DelegationDelegatorReward {
-  validator_address: string;
+  validatorAddress: string;
   reward: DecCoin[];
 }
 /**

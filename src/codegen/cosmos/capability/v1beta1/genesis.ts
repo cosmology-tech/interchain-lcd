@@ -6,7 +6,7 @@ export interface GenesisOwners {
   index: Long;
   /** index_owners are the owners at the given index. */
 
-  index_owners: CapabilityOwners;
+  indexOwners: CapabilityOwners;
 }
 /** GenesisOwners defines the capability owners with their corresponding index. */
 

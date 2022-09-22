@@ -8,10 +8,10 @@ import { ValidatorAccumulatedCommission, ValidatorAccumulatedCommissionSDKType, 
 
 export interface DelegatorWithdrawInfo {
   /** delegator_address is the address of the delegator. */
-  delegator_address: string;
+  delegatorAddress: string;
   /** withdraw_address is the address to withdraw the delegation rewards to. */
 
-  withdraw_address: string;
+  withdrawAddress: string;
 }
 /**
  * DelegatorWithdrawInfo is the address for where distributions rewards are
@@ -30,10 +30,10 @@ export interface DelegatorWithdrawInfoSDKType {
 
 export interface ValidatorOutstandingRewardsRecord {
   /** validator_address is the address of the validator. */
-  validator_address: string;
+  validatorAddress: string;
   /** outstanding_rewards represents the oustanding rewards of a validator. */
 
-  outstanding_rewards: DecCoin[];
+  outstandingRewards: DecCoin[];
 }
 /** ValidatorOutstandingRewardsRecord is used for import/export via genesis json. */
 
@@ -51,7 +51,7 @@ export interface ValidatorOutstandingRewardsRecordSDKType {
 
 export interface ValidatorAccumulatedCommissionRecord {
   /** validator_address is the address of the validator. */
-  validator_address: string;
+  validatorAddress: string;
   /** accumulated is the accumulated commission of a validator. */
 
   accumulated: ValidatorAccumulatedCommission;
@@ -75,7 +75,7 @@ export interface ValidatorAccumulatedCommissionRecordSDKType {
 
 export interface ValidatorHistoricalRewardsRecord {
   /** validator_address is the address of the validator. */
-  validator_address: string;
+  validatorAddress: string;
   /** period defines the period the historical rewards apply to. */
 
   period: Long;
@@ -102,7 +102,7 @@ export interface ValidatorHistoricalRewardsRecordSDKType {
 
 export interface ValidatorCurrentRewardsRecord {
   /** validator_address is the address of the validator. */
-  validator_address: string;
+  validatorAddress: string;
   /** rewards defines the current rewards of a validator. */
 
   rewards: ValidatorCurrentRewards;
@@ -120,13 +120,13 @@ export interface ValidatorCurrentRewardsRecordSDKType {
 
 export interface DelegatorStartingInfoRecord {
   /** delegator_address is the address of the delegator. */
-  delegator_address: string;
+  delegatorAddress: string;
   /** validator_address is the address of the validator. */
 
-  validator_address: string;
+  validatorAddress: string;
   /** starting_info defines the starting info of a delegator. */
 
-  starting_info: DelegatorStartingInfo;
+  startingInfo: DelegatorStartingInfo;
 }
 /** DelegatorStartingInfoRecord used for import / export via genesis json. */
 
@@ -144,7 +144,7 @@ export interface DelegatorStartingInfoRecordSDKType {
 
 export interface ValidatorSlashEventRecord {
   /** validator_address is the address of the validator. */
-  validator_address: string;
+  validatorAddress: string;
   /** height defines the block height at which the slash event occured. */
 
   height: Long;
@@ -153,7 +153,7 @@ export interface ValidatorSlashEventRecord {
   period: Long;
   /** validator_slash_event describes the slash event. */
 
-  validator_slash_event: ValidatorSlashEvent;
+  validatorSlashEvent: ValidatorSlashEvent;
 }
 /** ValidatorSlashEventRecord is used for import / export via genesis json. */
 
@@ -177,31 +177,31 @@ export interface GenesisState {
   params: Params;
   /** fee_pool defines the fee pool at genesis. */
 
-  fee_pool: FeePool;
+  feePool: FeePool;
   /** fee_pool defines the delegator withdraw infos at genesis. */
 
-  delegator_withdraw_infos: DelegatorWithdrawInfo[];
+  delegatorWithdrawInfos: DelegatorWithdrawInfo[];
   /** fee_pool defines the previous proposer at genesis. */
 
-  previous_proposer: string;
+  previousProposer: string;
   /** fee_pool defines the outstanding rewards of all validators at genesis. */
 
-  outstanding_rewards: ValidatorOutstandingRewardsRecord[];
+  outstandingRewards: ValidatorOutstandingRewardsRecord[];
   /** fee_pool defines the accumulated commisions of all validators at genesis. */
 
-  validator_accumulated_commissions: ValidatorAccumulatedCommissionRecord[];
+  validatorAccumulatedCommissions: ValidatorAccumulatedCommissionRecord[];
   /** fee_pool defines the historical rewards of all validators at genesis. */
 
-  validator_historical_rewards: ValidatorHistoricalRewardsRecord[];
+  validatorHistoricalRewards: ValidatorHistoricalRewardsRecord[];
   /** fee_pool defines the current rewards of all validators at genesis. */
 
-  validator_current_rewards: ValidatorCurrentRewardsRecord[];
+  validatorCurrentRewards: ValidatorCurrentRewardsRecord[];
   /** fee_pool defines the delegator starting infos at genesis. */
 
-  delegator_starting_infos: DelegatorStartingInfoRecord[];
+  delegatorStartingInfos: DelegatorStartingInfoRecord[];
   /** fee_pool defines the validator slash events at genesis. */
 
-  validator_slash_events: ValidatorSlashEventRecord[];
+  validatorSlashEvents: ValidatorSlashEventRecord[];
 }
 /** GenesisState defines the distribution module's genesis state. */
 

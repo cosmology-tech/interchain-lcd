@@ -1,8 +1,8 @@
 /** MsgVerifyInvariant represents a message to verify a particular invariance. */
 export interface MsgVerifyInvariant {
   sender: string;
-  invariant_module_name: string;
-  invariant_route: string;
+  invariantModuleName: string;
+  invariantRoute: string;
 }
 /** MsgVerifyInvariant represents a message to verify a particular invariance. */
 

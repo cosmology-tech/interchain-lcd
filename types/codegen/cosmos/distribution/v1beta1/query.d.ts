@@ -24,7 +24,7 @@ export interface QueryParamsResponseSDKType {
  */
 export interface QueryValidatorOutstandingRewardsRequest {
     /** validator_address defines the validator address to query for. */
-    validator_address: string;
+    validatorAddress: string;
 }
 /**
  * QueryValidatorOutstandingRewardsRequest is the request type for the
@@ -54,7 +54,7 @@ export interface QueryValidatorOutstandingRewardsResponseSDKType {
  */
 export interface QueryValidatorCommissionRequest {
     /** validator_address defines the validator address to query for. */
-    validator_address: string;
+    validatorAddress: string;
 }
 /**
  * QueryValidatorCommissionRequest is the request type for the
@@ -86,11 +86,11 @@ export interface QueryValidatorCommissionResponseSDKType {
  */
 export interface QueryValidatorSlashesRequest {
     /** validator_address defines the validator address to query for. */
-    validator_address: string;
+    validatorAddress: string;
     /** starting_height defines the optional starting height to query the slashes. */
-    starting_height?: Long;
+    startingHeight?: Long;
     /** starting_height defines the optional ending height to query the slashes. */
-    ending_height?: Long;
+    endingHeight?: Long;
     /** pagination defines an optional pagination for the request. */
     pagination?: PageRequest;
 }
@@ -134,9 +134,9 @@ export interface QueryValidatorSlashesResponseSDKType {
  */
 export interface QueryDelegationRewardsRequest {
     /** delegator_address defines the delegator address to query for. */
-    delegator_address: string;
+    delegatorAddress: string;
     /** validator_address defines the validator address to query for. */
-    validator_address: string;
+    validatorAddress: string;
 }
 /**
  * QueryDelegationRewardsRequest is the request type for the
@@ -170,7 +170,7 @@ export interface QueryDelegationRewardsResponseSDKType {
  */
 export interface QueryDelegationTotalRewardsRequest {
     /** delegator_address defines the delegator address to query for. */
-    delegator_address: string;
+    delegatorAddress: string;
 }
 /**
  * QueryDelegationTotalRewardsRequest is the request type for the
@@ -206,7 +206,7 @@ export interface QueryDelegationTotalRewardsResponseSDKType {
  */
 export interface QueryDelegatorValidatorsRequest {
     /** delegator_address defines the delegator address to query for. */
-    delegator_address: string;
+    delegatorAddress: string;
 }
 /**
  * QueryDelegatorValidatorsRequest is the request type for the
@@ -238,7 +238,7 @@ export interface QueryDelegatorValidatorsResponseSDKType {
  */
 export interface QueryDelegatorWithdrawAddressRequest {
     /** delegator_address defines the delegator address to query for. */
-    delegator_address: string;
+    delegatorAddress: string;
 }
 /**
  * QueryDelegatorWithdrawAddressRequest is the request type for the
@@ -254,7 +254,7 @@ export interface QueryDelegatorWithdrawAddressRequestSDKType {
  */
 export interface QueryDelegatorWithdrawAddressResponse {
     /** withdraw_address defines the delegator address to query for. */
-    withdraw_address: string;
+    withdrawAddress: string;
 }
 /**
  * QueryDelegatorWithdrawAddressResponse is the response type for the

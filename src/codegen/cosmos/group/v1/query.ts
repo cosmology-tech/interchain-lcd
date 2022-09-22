@@ -4,7 +4,7 @@ import { GroupInfo, GroupInfoSDKType, GroupPolicyInfo, GroupPolicyInfoSDKType, G
 
 export interface QueryGroupInfoRequest {
   /** group_id is the unique ID of the group. */
-  group_id: Long;
+  groupId: Long;
 }
 /** QueryGroupInfoRequest is the Query/GroupInfo request type. */
 
@@ -52,7 +52,7 @@ export interface QueryGroupPolicyInfoResponseSDKType {
 
 export interface QueryGroupMembersRequest {
   /** group_id is the unique ID of the group. */
-  group_id: Long;
+  groupId: Long;
   /** pagination defines an optional pagination for the request. */
 
   pagination?: PageRequest;
@@ -124,7 +124,7 @@ export interface QueryGroupsByAdminResponseSDKType {
 
 export interface QueryGroupPoliciesByGroupRequest {
   /** group_id is the unique ID of the group policy's group. */
-  group_id: Long;
+  groupId: Long;
   /** pagination defines an optional pagination for the request. */
 
   pagination?: PageRequest;
@@ -142,7 +142,7 @@ export interface QueryGroupPoliciesByGroupRequestSDKType {
 
 export interface QueryGroupPoliciesByGroupResponse {
   /** group_policies are the group policies info associated with the provided group. */
-  group_policies: GroupPolicyInfo[];
+  groupPolicies: GroupPolicyInfo[];
   /** pagination defines the pagination in the response. */
 
   pagination?: PageResponse;
@@ -178,7 +178,7 @@ export interface QueryGroupPoliciesByAdminRequestSDKType {
 
 export interface QueryGroupPoliciesByAdminResponse {
   /** group_policies are the group policies info with provided admin. */
-  group_policies: GroupPolicyInfo[];
+  groupPolicies: GroupPolicyInfo[];
   /** pagination defines the pagination in the response. */
 
   pagination?: PageResponse;
@@ -196,7 +196,7 @@ export interface QueryGroupPoliciesByAdminResponseSDKType {
 
 export interface QueryProposalRequest {
   /** proposal_id is the unique ID of a proposal. */
-  proposal_id: Long;
+  proposalId: Long;
 }
 /** QueryProposalRequest is the Query/Proposal request type. */
 
@@ -256,7 +256,7 @@ export interface QueryProposalsByGroupPolicyResponseSDKType {
 
 export interface QueryVoteByProposalVoterRequest {
   /** proposal_id is the unique ID of a proposal. */
-  proposal_id: Long;
+  proposalId: Long;
   /** voter is a proposal voter account address. */
 
   voter: string;
@@ -286,7 +286,7 @@ export interface QueryVoteByProposalVoterResponseSDKType {
 
 export interface QueryVotesByProposalRequest {
   /** proposal_id is the unique ID of a proposal. */
-  proposal_id: Long;
+  proposalId: Long;
   /** pagination defines an optional pagination for the request. */
 
   pagination?: PageRequest;
@@ -394,7 +394,7 @@ export interface QueryGroupsByMemberResponseSDKType {
 
 export interface QueryTallyResultRequest {
   /** proposal_id is the unique id of a proposal. */
-  proposal_id: Long;
+  proposalId: Long;
 }
 /** QueryTallyResultRequest is the Query/TallyResult request type. */
 

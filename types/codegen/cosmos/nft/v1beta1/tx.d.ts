@@ -1,7 +1,7 @@
 /** MsgSend represents a message to send a nft from one account to another account. */
 export interface MsgSend {
     /** class_id defines the unique identifier of the nft classification, similar to the contract address of ERC721 */
-    class_id: string;
+    classId: string;
     /** id defines the unique identification of nft */
     id: string;
     /** sender is the address of the owner of nft */

@@ -10,17 +10,21 @@ export class LCDQueryClient {
     requestClient: LCDClient;
   }) {
     this.req = requestClient;
+    this.getTx = this.getTx.bind(this);
+    this.getTxsEvent = this.getTxsEvent.bind(this);
+    this.getBlockWithTxs = this.getBlockWithTxs.bind(this);
   }
   /* GetTx fetches a tx by hash. */
 
 
-  getTx = async (params: GetTxRequest): Promise<GetTxResponseSDKType> => {
+  async getTx(params: GetTxRequest): Promise<GetTxResponseSDKType> {
     const endpoint = `cosmos/tx/v1beta1/txs/${params.hash}`;
     return await this.req.get<GetTxResponseSDKType>(endpoint);
-  };
+  }
   /* GetTxsEvent fetches txs by event. */
 
-  getTxsEvent = async (params: GetTxsEventRequest): Promise<GetTxsEventResponseSDKType> => {
+
+  async getTxsEvent(params: GetTxsEventRequest): Promise<GetTxsEventResponseSDKType> {
     const options: any = {
       params: {}
     };
@@ -33,18 +37,19 @@ export class LCDQueryClient {
       setPaginationParams(options, params.pagination);
     }
 
-    if (typeof params?.order_by !== "undefined") {
-      options.params.order_by = params.order_by;
+    if (typeof params?.orderBy !== "undefined") {
+      options.params.order_by = params.orderBy;
     }
 
     const endpoint = `cosmos/tx/v1beta1/txs`;
     return await this.req.get<GetTxsEventResponseSDKType>(endpoint, options);
-  };
+  }
   /* GetBlockWithTxs fetches a block with decoded txs.
   
   Since: cosmos-sdk 0.45.2 */
 
-  getBlockWithTxs = async (params: GetBlockWithTxsRequest): Promise<GetBlockWithTxsResponseSDKType> => {
+
+  async getBlockWithTxs(params: GetBlockWithTxsRequest): Promise<GetBlockWithTxsResponseSDKType> {
     const options: any = {
       params: {}
     };
@@ -55,5 +60,6 @@ export class LCDQueryClient {
 
     const endpoint = `cosmos/tx/v1beta1/txs/block/${params.height}`;
     return await this.req.get<GetBlockWithTxsResponseSDKType>(endpoint, options);
-  };
+  }
+
 }

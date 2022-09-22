@@ -1,6 +1,6 @@
 /** EventSend is emitted on Msg/Send */
 export interface EventSend {
-  class_id: string;
+  classId: string;
   id: string;
   sender: string;
   receiver: string;
@@ -16,7 +16,7 @@ export interface EventSendSDKType {
 /** EventMint is emitted on Mint */
 
 export interface EventMint {
-  class_id: string;
+  classId: string;
   id: string;
   owner: string;
 }
@@ -30,7 +30,7 @@ export interface EventMintSDKType {
 /** EventBurn is emitted on Burn */
 
 export interface EventBurn {
-  class_id: string;
+  classId: string;
   id: string;
   owner: string;
 }

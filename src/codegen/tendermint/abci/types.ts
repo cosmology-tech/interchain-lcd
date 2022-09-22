@@ -283,18 +283,18 @@ export interface Request {
   echo?: RequestEcho;
   flush?: RequestFlush;
   info?: RequestInfo;
-  set_option?: RequestSetOption;
-  init_chain?: RequestInitChain;
+  setOption?: RequestSetOption;
+  initChain?: RequestInitChain;
   query?: RequestQuery;
-  begin_block?: RequestBeginBlock;
-  check_tx?: RequestCheckTx;
-  deliver_tx?: RequestDeliverTx;
-  end_block?: RequestEndBlock;
+  beginBlock?: RequestBeginBlock;
+  checkTx?: RequestCheckTx;
+  deliverTx?: RequestDeliverTx;
+  endBlock?: RequestEndBlock;
   commit?: RequestCommit;
-  list_snapshots?: RequestListSnapshots;
-  offer_snapshot?: RequestOfferSnapshot;
-  load_snapshot_chunk?: RequestLoadSnapshotChunk;
-  apply_snapshot_chunk?: RequestApplySnapshotChunk;
+  listSnapshots?: RequestListSnapshots;
+  offerSnapshot?: RequestOfferSnapshot;
+  loadSnapshotChunk?: RequestLoadSnapshotChunk;
+  applySnapshotChunk?: RequestApplySnapshotChunk;
 }
 export interface RequestSDKType {
   echo?: RequestEchoSDKType;
@@ -323,8 +323,8 @@ export interface RequestFlush {}
 export interface RequestFlushSDKType {}
 export interface RequestInfo {
   version: string;
-  block_version: Long;
-  p2p_version: Long;
+  blockVersion: Long;
+  p2pVersion: Long;
 }
 export interface RequestInfoSDKType {
   version: string;
@@ -345,11 +345,11 @@ export interface RequestSetOptionSDKType {
 }
 export interface RequestInitChain {
   time: Date;
-  chain_id: string;
-  consensus_params: ConsensusParams;
+  chainId: string;
+  consensusParams: ConsensusParams;
   validators: ValidatorUpdate[];
-  app_state_bytes: Uint8Array;
-  initial_height: Long;
+  appStateBytes: Uint8Array;
+  initialHeight: Long;
 }
 export interface RequestInitChainSDKType {
   time: Date;
@@ -374,8 +374,8 @@ export interface RequestQuerySDKType {
 export interface RequestBeginBlock {
   hash: Uint8Array;
   header: Header;
-  last_commit_info: LastCommitInfo;
-  byzantine_validators: Evidence[];
+  lastCommitInfo: LastCommitInfo;
+  byzantineValidators: Evidence[];
 }
 export interface RequestBeginBlockSDKType {
   hash: Uint8Array;
@@ -418,7 +418,7 @@ export interface RequestOfferSnapshot {
   snapshot: Snapshot;
   /** light client-verified app hash for snapshot height */
 
-  app_hash: Uint8Array;
+  appHash: Uint8Array;
 }
 /** offers a snapshot to the application */
 
@@ -462,18 +462,18 @@ export interface Response {
   echo?: ResponseEcho;
   flush?: ResponseFlush;
   info?: ResponseInfo;
-  set_option?: ResponseSetOption;
-  init_chain?: ResponseInitChain;
+  setOption?: ResponseSetOption;
+  initChain?: ResponseInitChain;
   query?: ResponseQuery;
-  begin_block?: ResponseBeginBlock;
-  check_tx?: ResponseCheckTx;
-  deliver_tx?: ResponseDeliverTx;
-  end_block?: ResponseEndBlock;
+  beginBlock?: ResponseBeginBlock;
+  checkTx?: ResponseCheckTx;
+  deliverTx?: ResponseDeliverTx;
+  endBlock?: ResponseEndBlock;
   commit?: ResponseCommit;
-  list_snapshots?: ResponseListSnapshots;
-  offer_snapshot?: ResponseOfferSnapshot;
-  load_snapshot_chunk?: ResponseLoadSnapshotChunk;
-  apply_snapshot_chunk?: ResponseApplySnapshotChunk;
+  listSnapshots?: ResponseListSnapshots;
+  offerSnapshot?: ResponseOfferSnapshot;
+  loadSnapshotChunk?: ResponseLoadSnapshotChunk;
+  applySnapshotChunk?: ResponseApplySnapshotChunk;
 }
 export interface ResponseSDKType {
   exception?: ResponseExceptionSDKType;
@@ -514,9 +514,9 @@ export interface ResponseFlushSDKType {}
 export interface ResponseInfo {
   data: string;
   version: string;
-  app_version: Long;
-  last_block_height: Long;
-  last_block_app_hash: Uint8Array;
+  appVersion: Long;
+  lastBlockHeight: Long;
+  lastBlockAppHash: Uint8Array;
 }
 export interface ResponseInfoSDKType {
   data: string;
@@ -544,9 +544,9 @@ export interface ResponseSetOptionSDKType {
   info: string;
 }
 export interface ResponseInitChain {
-  consensus_params: ConsensusParams;
+  consensusParams: ConsensusParams;
   validators: ValidatorUpdate[];
-  app_hash: Uint8Array;
+  appHash: Uint8Array;
 }
 export interface ResponseInitChainSDKType {
   consensus_params: ConsensusParamsSDKType;
@@ -564,7 +564,7 @@ export interface ResponseQuery {
   index: Long;
   key: Uint8Array;
   value: Uint8Array;
-  proof_ops: ProofOps;
+  proofOps: ProofOps;
   height: Long;
   codespace: string;
 }
@@ -598,8 +598,8 @@ export interface ResponseCheckTx {
   /** nondeterministic */
 
   info: string;
-  gas_wanted: Long;
-  gas_used: Long;
+  gasWanted: Long;
+  gasUsed: Long;
   events: Event[];
   codespace: string;
 }
@@ -626,8 +626,8 @@ export interface ResponseDeliverTx {
   /** nondeterministic */
 
   info: string;
-  gas_wanted: Long;
-  gas_used: Long;
+  gasWanted: Long;
+  gasUsed: Long;
   events: Event[];
   codespace: string;
 }
@@ -646,8 +646,8 @@ export interface ResponseDeliverTxSDKType {
   codespace: string;
 }
 export interface ResponseEndBlock {
-  validator_updates: ValidatorUpdate[];
-  consensus_param_updates: ConsensusParams;
+  validatorUpdates: ValidatorUpdate[];
+  consensusParamUpdates: ConsensusParams;
   events: Event[];
 }
 export interface ResponseEndBlockSDKType {
@@ -658,7 +658,7 @@ export interface ResponseEndBlockSDKType {
 export interface ResponseCommit {
   /** reserve 1 */
   data: Uint8Array;
-  retain_height: Long;
+  retainHeight: Long;
 }
 export interface ResponseCommitSDKType {
   /** reserve 1 */
@@ -687,10 +687,10 @@ export interface ResponseApplySnapshotChunk {
   result: ResponseApplySnapshotChunk_Result;
   /** Chunks to refetch and reapply */
 
-  refetch_chunks: number[];
+  refetchChunks: number[];
   /** Chunk senders to reject and ban */
 
-  reject_senders: string[];
+  rejectSenders: string[];
 }
 export interface ResponseApplySnapshotChunkSDKType {
   result: ResponseApplySnapshotChunk_ResultSDKType;
@@ -727,10 +727,10 @@ export interface ConsensusParamsSDKType {
 
 export interface BlockParams {
   /** Note: must be greater than 0 */
-  max_bytes: Long;
+  maxBytes: Long;
   /** Note: must be greater or equal to -1 */
 
-  max_gas: Long;
+  maxGas: Long;
 }
 /** BlockParams contains limits on the block size. */
 
@@ -838,7 +838,7 @@ export interface ValidatorSDKType {
 /** ValidatorUpdate */
 
 export interface ValidatorUpdate {
-  pub_key: PublicKey;
+  pubKey: PublicKey;
   power: Long;
 }
 /** ValidatorUpdate */
@@ -851,7 +851,7 @@ export interface ValidatorUpdateSDKType {
 
 export interface VoteInfo {
   validator: Validator;
-  signed_last_block: boolean;
+  signedLastBlock: boolean;
 }
 /** VoteInfo */
 
@@ -876,7 +876,7 @@ export interface Evidence {
    * https://github.com/tendermint/tendermint/issues/4581
    */
 
-  total_voting_power: Long;
+  totalVotingPower: Long;
 }
 export interface EvidenceSDKType {
   type: EvidenceTypeSDKType;

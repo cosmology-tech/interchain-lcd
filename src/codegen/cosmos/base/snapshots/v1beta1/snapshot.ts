@@ -19,7 +19,7 @@ export interface SnapshotSDKType {
 
 export interface Metadata {
   /** SHA-256 chunk hashes */
-  chunk_hashes: Uint8Array[];
+  chunkHashes: Uint8Array[];
 }
 /** Metadata contains SDK-specific snapshot metadata. */
 
@@ -33,7 +33,7 @@ export interface SnapshotItem {
   store?: SnapshotStoreItem;
   iavl?: SnapshotIAVLItem;
   extension?: SnapshotExtensionMeta;
-  extension_payload?: SnapshotExtensionPayload;
+  extensionPayload?: SnapshotExtensionPayload;
   kv?: SnapshotKVItem;
   schema?: SnapshotSchema;
 }
